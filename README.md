@@ -3,6 +3,8 @@ FFmpeg-Android
 
 A videoplayer, streaming audioplayer and streaming audio decoder that outputs pcm or directly writes to Android/AudioTrack (based on https://github.com/appunite/AndroidFFmpeg)
 
+Built and modified for Android Studio.
+
 Used Sources
 ==============
 - trunk ffmpeg (https://github.com/FFmpeg/FFmpeg) / 17.02.2014
