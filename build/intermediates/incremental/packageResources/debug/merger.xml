@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\AndroidstudioProjects\FFmpeg-Android\res"><file name="ic_launcher" path="D:\AndroidstudioProjects\FFmpeg-Android\res\drawable-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="D:\AndroidstudioProjects\FFmpeg-Android\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="D:\AndroidstudioProjects\FFmpeg-Android\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_launcher" path="D:\AndroidstudioProjects\FFmpeg-Android\res\drawable-xxhdpi\ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file path="D:\AndroidstudioProjects\FFmpeg-Android\res\values\attrs.xml" qualifiers=""><declare-styleable name="SeekerView">
+        <attr format="color" name="borderColor"/>
+        <attr format="dimension" name="borderWidth"/>
+        <attr format="dimension" name="borderPadding"/>
+        <attr format="color" name="barColor"/>
+        <attr format="dimension" name="barMinHeight"/>
+        <attr format="dimension" name="barMinWidth"/>
+        <attr format="integer" name="maxValue"/>
+        <attr format="integer" name="currentValue"/>
+    </declare-styleable></file><file path="D:\AndroidstudioProjects\FFmpeg-Android\res\values\strings.xml" qualifiers=""><string name="app_name">FFMpeg</string></file><file path="D:\AndroidstudioProjects\FFmpeg-Android\res\values\styles.xml" qualifiers=""><style name="SeekerStyle" parent="android:Widget"/></file><file path="D:\AndroidstudioProjects\FFmpeg-Android\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="D:\AndroidstudioProjects\FFmpeg-Android\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file></source><source path="D:\AndroidstudioProjects\FFmpeg-Android\build\generated\res\rs\debug"/><source path="D:\AndroidstudioProjects\FFmpeg-Android\build\generated\res\generated\debug"/></dataSet><dataSet config="debug"><source path="D:\AndroidstudioProjects\FFmpeg-Android\build-types\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="SeekerView"><attr format="color" name="borderColor"/><attr format="dimension" name="borderWidth"/><attr format="dimension" name="borderPadding"/><attr format="color" name="barColor"/><attr format="dimension" name="barMinHeight"/><attr format="dimension" name="barMinWidth"/><attr format="integer" name="maxValue"/><attr format="integer" name="currentValue"/></declare-styleable></configuration></mergedItems></merger>

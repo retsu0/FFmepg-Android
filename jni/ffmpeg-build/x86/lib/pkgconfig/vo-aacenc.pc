@@ -1,0 +1,10 @@
+prefix=/home/retsu/FFmpeg-Android/jni/vo-aacenc/../ffmpeg-build/x86
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: VisualOn AAC Encoder
+Description: AAC codec library
+Version: 0.1.2
+Libs: -L${libdir} -lvo-aacenc
+Cflags: -I${includedir}

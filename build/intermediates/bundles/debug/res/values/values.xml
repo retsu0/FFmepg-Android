@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SeekerView"><attr format="color" name="borderColor"/><attr format="dimension" name="borderWidth"/><attr format="dimension" name="borderPadding"/><attr format="color" name="barColor"/><attr format="dimension" name="barMinHeight"/><attr format="dimension" name="barMinWidth"/><attr format="integer" name="maxValue"/><attr format="integer" name="currentValue"/></declare-styleable>
+    <!-- From: file:/D:/AndroidstudioProjects/FFmpeg-Android/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">FFMpeg</string>
+    <!-- From: file:/D:/AndroidstudioProjects/FFmpeg-Android/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="SeekerStyle" parent="android:Widget"/>
+</resources>

@@ -1,0 +1,126 @@
+x264 configure script
+Command line options: "--prefix=/home/retsu/FFmpeg-Android/jni/x264/../ffmpeg-build/armeavi-v7a-neon" "--host=arm-linux" "--enable-static" "--enable-neon"
+
+checking whether /home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ works... yes
+checking whether /home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ supports for( int i = 0; i < 9; i++ ); with -std=gnu99... yes
+checking whether /home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ supports __asm__("rev ip, ip");... yes
+checking whether /home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ supports __asm__("movt r0, #0");... yes
+checking whether /home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ supports __asm__("vadd.i16 q0, q0, q0");... yes
+checking for pthread.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ conftest.c -mfloat-abi=softfp -mfpu=neon -marm -march=armv7-a -mtune=cortex-a8 -mthumb -D__thumb__  -Wall -I. -I$(SRCPATH) -std=gnu99 -lpthread  -Wl,-rpath-link=/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib -L/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib  -lc -lm -ldl -llog -lm -o conftest
+/home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.6/../../../../arm-linux-androideabi/bin/ld: error: cannot find -lpthread
+collect2: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <pthread.h>
+int main () {  return 0; }
+--------------------------------------------------
+checking for return log2f(2); in math.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ conftest.c -mfloat-abi=softfp -mfpu=neon -marm -march=armv7-a -mtune=cortex-a8 -mthumb -D__thumb__  -Wall -I. -I$(SRCPATH) -std=gnu99 -Werror  -Wl,-rpath-link=/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib -L/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib  -lc -lm -ldl -llog -lm -o conftest
+conftest.c: In function 'main':
+conftest.c:2:1: error: implicit declaration of function 'log2f' [-Werror=implicit-function-declaration]
+conftest.c:2:22: error: incompatible implicit declaration of built-in function 'log2f' [-Werror]
+cc1: all warnings being treated as errors
+
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <math.h>
+int main () { return log2f(2); return 0; }
+--------------------------------------------------
+checking for sws_init_context(0,0,0); in libswscale/swscale.h... yes
+checking whether defined(AV_PIX_FMT_FLAG_RGB) is true... yes
+checking for avformat_close_input(0); in libavformat/avformat.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ conftest.c -mfloat-abi=softfp -mfpu=neon -marm -march=armv7-a -mtune=cortex-a8 -mthumb -D__thumb__  -Wall -I. -I$(SRCPATH) -std=gnu99  -I../ffmpeg-build/armeabi-v7a/include   -L.  -pthread -L../ffmpeg-build/armeabi-v7a/lib -L/home/retsu/FFmpeg-Android/jni/libass/../ffmpeg-build/armeabi-v7a/lib -L/home/retsu/FFmpeg-Android/jni/fribidi/../ffmpeg-build/armeabi-v7a/lib -L/Users/fschuetz/Dropbox/devel/android/FFMpeg/jni/freetype2/../ffmpeg-build/x86/lib -lavformat -lavcodec -lvorbisenc -lvorbis -logg -lvo-amrwbenc -lvo-aacenc -lass -lfribidi -lfreetype -lz -lgcc -lswscale -lavutil -lm    -Wl,-rpath-link=/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib -L/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib  -lc -lm -ldl -llog -lm -o conftest
+/home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.6/../../../../arm-linux-androideabi/bin/ld: error: cannot find -lpthread
+collect2: ld returned 1 exit status
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <libavformat/avformat.h>
+int main () { avformat_close_input(0); return 0; }
+--------------------------------------------------
+checking for FFMS_DestroyVideoSource(0); in ffms.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ conftest.c -mfloat-abi=softfp -mfpu=neon -marm -march=armv7-a -mtune=cortex-a8 -mthumb -D__thumb__  -Wall -I. -I$(SRCPATH) -std=gnu99  -lffms2  -Wl,-rpath-link=/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib -L/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib  -lc -lm -ldl -llog -lm -o conftest
+conftest.c:1:18: fatal error: ffms.h: No such file or directory
+compilation terminated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <ffms.h>
+int main () { FFMS_DestroyVideoSource(0); return 0; }
+--------------------------------------------------
+checking for FFMS_DestroyVideoSource(0); in ffms.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ conftest.c -mfloat-abi=softfp -mfpu=neon -marm -march=armv7-a -mtune=cortex-a8 -mthumb -D__thumb__  -Wall -I. -I$(SRCPATH) -std=gnu99  -lffms2 -lstdc++ -L.  -pthread -L../ffmpeg-build/armeabi-v7a/lib -L/home/retsu/FFmpeg-Android/jni/libass/../ffmpeg-build/armeabi-v7a/lib -L/home/retsu/FFmpeg-Android/jni/fribidi/../ffmpeg-build/armeabi-v7a/lib -L/Users/fschuetz/Dropbox/devel/android/FFMpeg/jni/freetype2/../ffmpeg-build/x86/lib -lavformat -lavcodec -lvorbisenc -lvorbis -logg -lvo-amrwbenc -lvo-aacenc -lass -lfribidi -lfreetype -lz -lgcc -lswscale -lavutil -lm    -Wl,-rpath-link=/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib -L/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib  -lc -lm -ldl -llog -lm -o conftest
+conftest.c:1:18: fatal error: ffms.h: No such file or directory
+compilation terminated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <ffms.h>
+int main () { FFMS_DestroyVideoSource(0); return 0; }
+--------------------------------------------------
+checking for lsmash.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ conftest.c -mfloat-abi=softfp -mfpu=neon -marm -march=armv7-a -mtune=cortex-a8 -mthumb -D__thumb__  -Wall -I. -I$(SRCPATH) -std=gnu99  -I../ffmpeg-build/armeabi-v7a/include    -llsmash  -L../ffmpeg-build/armeabi-v7a/lib -lswscale -lavutil -lm    -Wl,-rpath-link=/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib -L/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib  -lc -lm -ldl -llog -lm -o conftest
+conftest.c:1:20: fatal error: lsmash.h: No such file or directory
+compilation terminated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <lsmash.h>
+int main () {  return 0; }
+--------------------------------------------------
+checking for -lz... yes
+checking for gpac/isomedia.h... no
+Failed commandline was:
+--------------------------------------------------
+/home/retsu/android-ndk/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc --sysroot=/home/retsu/android-ndk/platforms/android-9/arch-arm/ conftest.c -mfloat-abi=softfp -mfpu=neon -marm -march=armv7-a -mtune=cortex-a8 -mthumb -D__thumb__  -Wall -I. -I$(SRCPATH) -std=gnu99  -I../ffmpeg-build/armeabi-v7a/include   -lgpac_static -lz  -L../ffmpeg-build/armeabi-v7a/lib -lswscale -lavutil -lm    -Wl,-rpath-link=/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib -L/home/retsu/android-ndk/platforms/android-9/arch-arm//usr/lib  -lc -lm -ldl -llog -lm -o conftest
+conftest.c:1:27: fatal error: gpac/isomedia.h: No such file or directory
+compilation terminated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <gpac/isomedia.h>
+int main () {  return 0; }
+--------------------------------------------------
+checking for uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3}; in stdint.h... yes
+checking for -fno-tree-vectorize... yes
+checking for fseeko(stdin,0,0); in stdio.h... yes
+checking for -Wshadow... yes
+checking for perl... yes
+
+platform:      ARM
+system:        LINUX
+cli:           yes
+libx264:       internal
+shared:        no
+static:        yes
+asm:           yes
+interlaced:    yes
+avs:           avxsynth
+lavf:          no
+ffms:          no
+mp4:           no
+gpl:           yes
+thread:        no
+opencl:        yes
+filters:       resize crop select_every 
+debug:         no
+gprof:         no
+strip:         no
+PIC:           no
+bit depth:     8
+chroma format: all

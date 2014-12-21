@@ -1,0 +1,10 @@
+prefix=/home/retsu/FFmpeg-Android/jni/vo-amrwbenc/../ffmpeg-build/x86
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: VisualOn AMR-WB encoder
+Description: Adaptive Multi-Rate Wideband speech codec library
+Version: 0.1.2
+Libs: -L${libdir} -lvo-amrwbenc
+Cflags: -I${includedir}
